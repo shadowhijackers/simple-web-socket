@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Web Socket</title>
+    </head>
+    <body>
+        <h1>WebSocket Implementation</h1>
+        <div>
+            <a id="gang-socket-link" href="/gang/locations">Create Gang Locations</a>
+        </div>
+        <script>
+
+      (function(){
+         window.addEventListener("DOMContentLoaded", function(){
+            const gangEl = document.getElementById("gang-socket-link");
+            console.log(gangEl);
+            if (!!gangEl){
+                gangEl.href = "http://" + document.location.host+ "/gang/locations/" + "{{.Id}}"
+            }
+         })
+      })()
+        </script>
+    </body>
+</html>
